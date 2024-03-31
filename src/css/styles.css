@@ -175,6 +175,10 @@ div button {
   justify-content: space-evenly;
 }
 
+#footer div {
+  display: flex;
+}
 #footer img {
+  margin-right: 1rem;
   width: 2rem;
 }
