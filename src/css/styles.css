@@ -150,3 +150,31 @@ div button {
   align-items: center;
   box-sizing: border-box;
 }
+
+#sidebyside {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.5rem;
+}
+
+#top-align {
+  text-align: left;
+  vertical-align: middle;
+  position: relative;
+  right: 7rem;
+}
+
+#top-align p {
+  width: 20rem;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#footer img {
+  width: 2rem;
+}

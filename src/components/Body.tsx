@@ -1,6 +1,7 @@
 import "../css/styles.css";
 import bowl from "../images/bowl.png";
 import MenuCont from "./MenuCont";
+import fries from "../images/fries.png";
 
 function Body() {
   return (
@@ -28,6 +29,16 @@ function Body() {
       </div>
       <div id="menu-container">
         <MenuCont />
+      </div>
+      <div id="sidebyside">
+        <img src={fries} alt="french fries" />
+        <div id="top-align">
+          <h2>Best Potatoes For French Fries</h2>
+          <p>
+            Russet potatoes are ideal. since they're dense, they don't contain
+            as much water inside, which allows then to get extra crispy.
+          </p>
+        </div>
       </div>
     </div>
   );
