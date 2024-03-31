@@ -4,25 +4,43 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  width: 100%;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #040404;
   text-decoration: inherit;
 }
+a {
+  color: #000000;
+} /* Unvisited link  */
+a:visited {
+  color: #000000;
+} /* Visited link    */
 a:hover {
-  color: #535bf2;
-}
+  color: #000000;
+} /* Mouse over link */
+a:active {
+  color: #000000;
+} /* Selected link   */
 
 body {
+  background: rgb(230, 230, 230);
+  background: linear-gradient(
+    150deg,
+    rgba(230, 230, 230, 1) 0%,
+    rgba(194, 231, 210, 1) 31%,
+    rgba(247, 187, 102, 1) 100%
+  );
   margin: 0;
   display: flex;
   place-items: center;

@@ -1,0 +1,71 @@
+#container {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+#down-arrow {
+  font-size: 36px;
+  color: black;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+ul li {
+  height: fit-content;
+  display: inline-table;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 12px;
+}
+
+ul li img {
+  height: 36px;
+}
+
+#logo {
+  color: orange;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#logo span {
+  color: orangered;
+}
+
+#bowl {
+  width: 40rem;
+}
+
+div button {
+  border-radius: 50px;
+  margin: 2rem;
+  color: white;
+  font-weight: 700;
+}
+
+#white-btn {
+  background-color: rgb(125, 121, 121);
+}
+
+#brown-btn {
+  background-color: rgb(168, 68, 41);
+}
+
+#add-btn {
+  color: black;
+  background-color: transparent;
+  border-radius: 50px;
+  border-color: rgb(168, 68, 41);
+  border-width: 0.1rem;
+}
