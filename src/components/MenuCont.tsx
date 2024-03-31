@@ -1,15 +1,46 @@
 import "../css/styles.css";
-import info from "../../db.json";
+// import info from "../../db.json";
 import star from "../images/star.svg";
 import bin from "../images/bin.svg";
+import { useState, useEffect } from "react";
 
-var data = info.menu;
-console.log(data);
+// var data = info.menu;
+// console.log(data);
 
-function MenuCont() {
+interface MenuItem {
+  id: string;
+  image: string;
+  dish_name: string;
+  description: string;
+  score: number;
+  ingredients: string[];
+  price: number;
+}
+
+function MenuCont(): JSX.Element {
+  const [menu, setMenu] = useState<MenuItem[]>([]);
+
+  useEffect(() => {
+    fetchMenuData();
+  }, []);
+
+  const fetchMenuData = async () => {
+    try {
+      const response = await fetch("../../db.json");
+      if (!response.ok) {
+        throw new Error("Failed to fetch menu data");
+      }
+      const data = await response.json();
+      setMenu(data.menu);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  console.log(menu);
   return (
     <>
-      {data.map((item) => (
+      {menu.map((item) => (
         <div id="menu-cont">
           <img id="menu-img" src={item.image} alt="food pic" />
           <div id="rating">
