@@ -1,5 +1,6 @@
 import "../css/styles.css";
 import bowl from "../images/bowl.png";
+import MenuCont from "./MenuCont";
 
 function Body() {
   return (
@@ -24,6 +25,9 @@ function Body() {
           <h6>Our Mainstay menu</h6>
         </div>
         <button id="add-btn">+Add new item</button>
+      </div>
+      <div id="menu-container">
+        <MenuCont />
       </div>
     </div>
   );
