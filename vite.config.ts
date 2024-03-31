@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/START-UP-TASK/",
+  base: "/Start-up-task/",
   plugins: [react()],
 });
