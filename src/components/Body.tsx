@@ -20,16 +20,7 @@ function Body() {
         </div>
         <img id="bowl" src={bowl} alt="food bowl"></img>
       </div>
-      <div>
-        <div>
-          <h1>Top List</h1>
-          <h6>Our Mainstay menu</h6>
-        </div>
-        <button id="add-btn">+Add new item</button>
-      </div>
-      <div id="menu-container">
-        <MenuCont />
-      </div>
+      <MenuCont />
       <div id="sidebyside">
         <img src={fries} alt="french fries" />
         <div id="top-align">

@@ -1,11 +1,7 @@
 import "../css/styles.css";
-// import info from "../../db.json";
 import star from "../images/star.svg";
 import bin from "../images/bin.svg";
 import { useState, useEffect } from "react";
-
-// var data = info.menu;
-// console.log(data);
 
 interface MenuItem {
   id: string;
@@ -37,28 +33,57 @@ function MenuCont(): JSX.Element {
     }
   };
 
-  console.log(menu);
+  const Delete = (id: string) => {
+    const updatedMenu = menu.filter((item) => item.id !== id);
+    setMenu(updatedMenu);
+  };
+
+  const changePrice = (id: string) => {
+    var newPrice = Number(window.prompt("Write new Price"));
+    const updatedMenu = menu.map((item) => {
+      if (item.id === id && item.price > 0) {
+        return {
+          ...item,
+          price: newPrice,
+        };
+      }
+      return item;
+    });
+    setMenu(updatedMenu);
+  };
+
   return (
     <>
-      {menu.map((item) => (
-        <div id="menu-cont">
-          <img id="menu-img" src={item.image} alt="food pic" />
-          <div id="rating">
-            <img src={star} alt="star" />
-            <p>{item.score}</p>
-          </div>
-          <h4>{item.dish_name}</h4>
-          <p>{item.description}</p>
-          <div id="price-box">
-            <h4>{item.price} $</h4>
+      <div>
+        <div>
+          <h1>Top List</h1>
+          <h6>Our Mainstay menu</h6>
+        </div>
+        <button id="add-btn">+Add new item</button>
+      </div>
+      <div id="menu-container">
+        {menu.map((item) => (
+          <div id="menu-cont">
+            <img id="menu-img" src={item.image} alt="food pic" />
+            <div id="rating">
+              <img src={star} alt="star" />
+              <p>{item.score}</p>
+            </div>
+            <h4>{item.dish_name}</h4>
+            <p>{item.description}</p>
             <div id="price-box">
-              <img src={bin} alt="delete" />
-              <button id="circle-btn">+</button>
+              <h4>{item.price} $</h4>
+              <div id="price-box">
+                <img onClick={() => Delete(item.id)} src={bin} alt="delete" />
+                <button onClick={() => changePrice(item.id)} id="circle-btn">
+                  +
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-      ;
+        ))}
+        ;
+      </div>
     </>
   );
 }
