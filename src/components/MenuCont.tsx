@@ -2,6 +2,7 @@ import "../css/styles.css";
 import star from "../../public/images/star.svg";
 import bin from "../../public/images/bin.svg";
 import { useState, useEffect } from "react";
+import Modal from "./Modal";
 
 interface MenuItem {
   id: string;
@@ -15,6 +16,7 @@ interface MenuItem {
 
 function MenuCont(): JSX.Element {
   const [menu, setMenu] = useState<MenuItem[]>([]);
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     fetchMenuData();
@@ -52,18 +54,27 @@ function MenuCont(): JSX.Element {
     setMenu(updatedMenu);
   };
 
+  if (openModal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
+
   return (
     <>
+      <Modal open={openModal} onClose={() => setOpenModal(false)} />
       <div>
         <div>
           <h1>Top List</h1>
           <h6>Our Mainstay menu</h6>
         </div>
-        <button id="add-btn">+Add new item</button>
+        <button id="add-btn" onClick={() => setOpenModal(true)}>
+          +Add new item
+        </button>
       </div>
       <div id="menu-container">
         {menu.map((item) => (
-          <div id="menu-cont">
+          <div id="menu-cont" key={item.id}>
             <img id="menu-img" src={item.image} alt="food pic" />
             <div id="rating">
               <img src={star} alt="star" />

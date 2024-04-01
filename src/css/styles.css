@@ -194,3 +194,44 @@ div button {
 #footer p {
   cursor: pointer;
 }
+
+.modalContainer {
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 8px;
+  z-index: 2;
+  text-align: left;
+  padding-left: 20%;
+}
+
+.modalContainer div {
+  display: flex;
+  vertical-align: middle;
+
+  text-align: center;
+  /* margin: 1rem; */
+}
+
+.modalContainer button {
+  width: fit-content;
+  background-color: brown;
+}
+
+label {
+  padding-top: 1rem;
+}
+
+input {
+  background-color: aliceblue;
+  margin: 1rem;
+  color: brown;
+}
+
+body.active-modal {
+  overflow-y: hidden;
+}
