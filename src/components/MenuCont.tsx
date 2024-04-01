@@ -1,7 +1,7 @@
 import "../css/styles.css";
 import star from "../../public/images/star.svg";
 import bin from "../../public/images/bin.svg";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
 
 interface MenuItem {
@@ -14,7 +14,7 @@ interface MenuItem {
   price: number;
 }
 
-function MenuCont(): JSX.Element {
+const MenuCont = (): JSX.Element => {
   const [menu, setMenu] = useState<MenuItem[]>([]);
   const [openModal, setOpenModal] = useState(false);
 
@@ -35,7 +35,11 @@ function MenuCont(): JSX.Element {
     }
   };
 
-  const Delete = (id: string) => {
+  const addItemToMenu = (newItem: MenuItem) => {
+    setMenu([...menu, newItem]);
+  };
+
+  const handleDelete = (id: string) => {
     const updatedMenu = menu.filter((item) => item.id !== id);
     setMenu(updatedMenu);
   };
@@ -62,14 +66,18 @@ function MenuCont(): JSX.Element {
 
   return (
     <>
-      <Modal open={openModal} onClose={() => setOpenModal(false)} />
+      <Modal
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        addItemToMenu={addItemToMenu}
+      />
       <div>
         <div>
           <h1>Top List</h1>
           <h6>Our Mainstay menu</h6>
         </div>
         <button id="add-btn" onClick={() => setOpenModal(true)}>
-          +Add new item
+          + Add new item
         </button>
       </div>
       <div id="menu-container">
@@ -85,7 +93,11 @@ function MenuCont(): JSX.Element {
             <div id="price-box">
               <h4>{item.price} $</h4>
               <div id="price-box">
-                <img onClick={() => Delete(item.id)} src={bin} alt="delete" />
+                <img
+                  onClick={() => handleDelete(item.id)}
+                  src={bin}
+                  alt="delete"
+                />
                 <button onClick={() => changePrice(item.id)} id="circle-btn">
                   +
                 </button>
@@ -93,10 +105,9 @@ function MenuCont(): JSX.Element {
             </div>
           </div>
         ))}
-        ;
       </div>
     </>
   );
-}
+};
 
 export default MenuCont;
