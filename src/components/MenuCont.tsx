@@ -41,7 +41,7 @@ function MenuCont(): JSX.Element {
   const changePrice = (id: string) => {
     var newPrice = Number(window.prompt("Write new Price"));
     const updatedMenu = menu.map((item) => {
-      if (item.id === id && item.price > 0) {
+      if (item.id === id && item.price > 0 && newPrice) {
         return {
           ...item,
           price: newPrice,
