@@ -2,7 +2,7 @@
   "menu": [
     {
       "id": "2",
-      "image": "src/images/grilled-salmon.jpg",
+      "image": "../src/images/grilled-salmon.jpg",
       "dish_name": "Grilled Salmon",
       "description": "Fresh salmon fillet seasoned and grilled to perfection.",
       "score": 4,
