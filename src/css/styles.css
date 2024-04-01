@@ -17,12 +17,11 @@ button:hover {
 }
 
 ul {
+  display: flex;
+  align-items: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
-  text-align: center;
-  justify-content: center;
-  vertical-align: middle;
 }
 
 ul li {
@@ -147,8 +146,8 @@ div button {
 
 #circle-btn {
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   background-color: rgb(168, 68, 41);
   display: flex;
   justify-content: center;
