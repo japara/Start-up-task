@@ -221,6 +221,7 @@ input {
   background-color: $background-white;
   margin: 1rem;
   color: $black;
+  border-radius: 6px;
 }
 body.active-modal {
   overflow-y: hidden;
