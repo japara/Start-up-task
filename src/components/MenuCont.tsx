@@ -66,11 +66,7 @@ function MenuCont(): JSX.Element {
 
   return (
     <>
-      <Modal
-        open={openModal}
-        onClose={() => setOpenModal(false)}
-        addItemToMenu={addItemToMenu}
-      />
+      <Modal open={openModal} onClose={() => setOpenModal(false)} />
       <div>
         <div>
           <h1>Top List</h1>
