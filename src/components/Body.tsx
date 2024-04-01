@@ -1,5 +1,5 @@
 import "../css/styles.css";
-import bowl from "..../../public/images/bowl.png";
+import bowl from "../../public/images/bowl.png";
 import MenuCont from "./MenuCont";
 import fries from "../../public/images/fries.png";
 
