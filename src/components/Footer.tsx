@@ -1,8 +1,8 @@
 import "../css/styles.css";
-import car from "../images/car.svg";
-import mobile from "../images/mobile.svg";
-import group from "../images/group.svg";
-import tray from "../images/tray.svg";
+import car from "../assets/images/car.svg";
+import mobile from "../assets/images/mobile.svg";
+import group from "../assets/images/group.svg";
+import tray from "../assets/images/tray.svg";
 
 function Footer() {
   return (
