@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Modal = ({ open, onClose, addItemToMenu }) => {
   const [image, setImage] = useState(null); // State to store the selected image
 
-  const handleImageChange = (e: { target: { files: any[] } }) => {
+  const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
   };
