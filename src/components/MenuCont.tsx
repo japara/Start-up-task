@@ -18,10 +18,6 @@ function MenuCont(): JSX.Element {
   const [menu, setMenu] = useState<MenuItem[]>([]);
   const [openModal, setOpenModal] = useState(false);
 
-  const addItemToMenu = (newItem: MenuItem) => {
-    setMenu([...menu, newItem]);
-  };
-
   useEffect(() => {
     fetchMenuData();
   }, []);
