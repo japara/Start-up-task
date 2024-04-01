@@ -30,6 +30,7 @@ ul li {
   font-size: 18px;
   font-weight: bold;
   margin: 12px;
+  cursor: pointer;
 }
 
 ul li img {
@@ -187,4 +188,9 @@ div button {
 #footer img {
   margin-right: 1rem;
   width: 2rem;
+  cursor: pointer;
+}
+
+#footer p {
+  cursor: pointer;
 }
