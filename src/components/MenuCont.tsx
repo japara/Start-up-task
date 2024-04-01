@@ -1,7 +1,7 @@
 import "../css/styles.css";
 import star from "../../public/images/star.svg";
 import bin from "../../public/images/bin.svg";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Modal from "./Modal";
 
 interface MenuItem {
