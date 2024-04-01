@@ -13,10 +13,12 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
+    "D": "^1.0.0",
     "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-modal": "^3.16.1"
+    "react-modal": "^3.16.1",
+    "sass": "^1.72.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
