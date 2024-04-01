@@ -1,11 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 
-const Modal = ({ open, onClose, addItemToMenu }) => {
-  const [image, setImage] = useState(null); // State to store the selected image
+interface ModalProps {
+  open: boolean;
+  onClose: () => void;
+  addItemToMenu: (newItem: MenuItem) => void;
+}
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setImage(file);
+interface MenuItem {
+  id: string;
+  dish_name: string;
+  price: number;
+  score: number;
+  image: string;
+  ingredients: string[];
+  description: string;
+}
+
+const Modal: React.FC<ModalProps> = ({ open, onClose, addItemToMenu }) => {
+  const [image, setImage] = useState<File | null>(null);
+
+  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      const file = e.target.files[0];
+      setImage(file);
+    }
   };
 
   const handleAdd = () => {
@@ -33,12 +51,16 @@ const Modal = ({ open, onClose, addItemToMenu }) => {
       : [];
     const description = descriptionElement ? descriptionElement.value : "";
 
-    const newItem = {
+    if (!dishName || !price || !rating || !description) {
+      return alert("please fill all the lines");
+    }
+
+    const newItem: MenuItem = {
       id: String(Date.now()),
       dish_name: dishName,
       price: price,
       score: rating,
-      image: image ? URL.createObjectURL(image) : "", // Using URL.createObjectURL to display selected image
+      image: image ? URL.createObjectURL(image) : "",
       ingredients: ingredients,
       description: description,
     };
