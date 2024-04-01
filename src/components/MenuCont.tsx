@@ -22,7 +22,7 @@ function MenuCont(): JSX.Element {
 
   const fetchMenuData = async () => {
     try {
-      const response = await fetch("../../db.json");
+      const response = await fetch("/db.json");
       if (!response.ok) {
         throw new Error("Failed to fetch menu data");
       }
