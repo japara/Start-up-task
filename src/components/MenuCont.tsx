@@ -1,6 +1,6 @@
 import "../css/styles.css";
-import star from "../images/star.svg";
-import bin from "../images/bin.svg";
+import star from "../assets/images/star.svg";
+import bin from "../assets/images/bin.svg";
 import { useState, useEffect } from "react";
 
 interface MenuItem {

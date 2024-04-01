@@ -1,5 +1,5 @@
 import "../css/styles.css";
-import svg from "../images/profile-circle.svg";
+import svg from "../assets/images/profile-circle.svg";
 
 function Header() {
   return (

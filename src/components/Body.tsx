@@ -1,7 +1,7 @@
 import "../css/styles.css";
-import bowl from "../images/bowl.png";
+import bowl from "../assets/images/bowl.png";
 import MenuCont from "./MenuCont";
-import fries from "../images/fries.png";
+import fries from "../assets/images/fries.png";
 
 function Body() {
   return (
