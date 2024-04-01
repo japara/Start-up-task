@@ -3,17 +3,35 @@ import React, { useState } from "react";
 const Modal = ({ open, onClose, addItemToMenu }) => {
   const [image, setImage] = useState(null); // State to store the selected image
 
-  const handleImageChange = (e) => {
+  const handleImageChange = (e: { target: { files: any[] } }) => {
     const file = e.target.files[0];
     setImage(file);
   };
 
   const handleAdd = () => {
-    const dishName = document.getElementById("dish-name").value;
-    const price = parseFloat(document.getElementById("price").value);
-    const rating = parseFloat(document.getElementById("rating").value);
-    const ingredients = document.getElementById("ingredients").value.split(",");
-    const description = document.getElementById("description").value;
+    const dishNameElement = document.getElementById(
+      "dish-name"
+    ) as HTMLInputElement | null;
+    const priceElement = document.getElementById(
+      "price"
+    ) as HTMLInputElement | null;
+    const ratingElement = document.getElementById(
+      "rating"
+    ) as HTMLInputElement | null;
+    const ingredientsElement = document.getElementById(
+      "ingredients"
+    ) as HTMLInputElement | null;
+    const descriptionElement = document.getElementById(
+      "description"
+    ) as HTMLInputElement | null;
+
+    const dishName = dishNameElement ? dishNameElement.value : "";
+    const price = priceElement ? parseFloat(priceElement.value) : 0;
+    const rating = ratingElement ? parseFloat(ratingElement.value) : 0;
+    const ingredients = ingredientsElement
+      ? ingredientsElement.value.split(",")
+      : [];
+    const description = descriptionElement ? descriptionElement.value : "";
 
     const newItem = {
       id: String(Date.now()),
