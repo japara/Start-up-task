@@ -51,7 +51,7 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, addItemToMenu }) => {
       : [];
     const description = descriptionElement ? descriptionElement.value : "";
 
-    if (!dishName || !price || !rating || !description) {
+    if (!dishName || !price || !rating || !ingredients) {
       return alert("please fill all the lines");
     }
 

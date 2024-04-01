@@ -3,7 +3,7 @@ $orange: orange;
 $orangered: orangered;
 $white: white;
 $color_5: rgb(247, 197, 14);
-$background-color_1: rgba(240, 240, 240, 0.6);
+$background-color_1: rgba(191, 191, 191, 0.6);
 $background-color_2: rgb(168, 68, 41);
 $background-color_3: transparent;
 $background-white: aliceblue;
@@ -14,6 +14,9 @@ button {
   &:hover {
     cursor: pointer;
   }
+}
+body.active-modal {
+  overflow-y: hidden;
 }
 
 //header
