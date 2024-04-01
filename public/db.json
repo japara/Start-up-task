@@ -2,7 +2,7 @@
   "menu": [
     {
       "id": "2",
-      "image": "public/images/grilled-salmon.jpg",
+      "image": "/images/grilled-salmon.jpg",
       "dish_name": "Grilled Salmon",
       "description": "Fresh salmon fillet seasoned and grilled to perfection.",
       "score": 4,
@@ -26,7 +26,7 @@
     },
     {
       "id": "4",
-      "image": "/src/images/chicken-alfredo.jpeg",
+      "image": "/images/chicken-alfredo.jpeg",
       "dish_name": "Chicken Alfredo",
       "description": "Creamy Alfredo sauce tossed with grilled chicken and fettuccine pasta.",
       "score": 9,
@@ -41,7 +41,7 @@
     },
     {
       "id": "5",
-      "image": "src/images/margherita-pizza.jpg",
+      "image": "/images/margherita-pizza.jpg",
       "dish_name": "Margarita Pizza",
       "description": "Classic pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves.",
       "score": 2,
@@ -56,7 +56,7 @@
     },
     {
       "id": "6",
-      "image": "src/images/Caesar-Salad.jpg",
+      "image": "/images/Caesar-Salad.jpg",
       "dish_name": "Caesar Salad",
       "description": "Romaine lettuce tossed with Caesar dressing, croutons, and Parmesan cheese.",
       "score": 4,
@@ -71,7 +71,7 @@
     },
     {
       "id": "7",
-      "image": "src/images/beef-burger.jpg.avif",
+      "image": "/images/beef-burger.jpg.avif",
       "dish_name": "Beef Burger",
       "description": "Juicy beef patty topped with lettuce, tomato, onion, and pickles.",
       "score": 6,
@@ -80,7 +80,7 @@
     },
     {
       "id": "8",
-      "image": "src/images/stir-fry.jpg",
+      "image": "/images/stir-fry.jpg",
       "dish_name": "Vegetable Stir-Fry",
       "description": "Assorted fresh vegetables stir-fried in a savory sauce.",
       "score": 10,
