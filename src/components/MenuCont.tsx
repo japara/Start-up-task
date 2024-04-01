@@ -18,6 +18,10 @@ function MenuCont(): JSX.Element {
   const [menu, setMenu] = useState<MenuItem[]>([]);
   const [openModal, setOpenModal] = useState(false);
 
+  const addItemToMenu = (newItem: MenuItem) => {
+    setMenu([...menu, newItem]);
+  };
+
   useEffect(() => {
     fetchMenuData();
   }, []);
@@ -62,7 +66,11 @@ function MenuCont(): JSX.Element {
 
   return (
     <>
-      <Modal open={openModal} onClose={() => setOpenModal(false)} />
+      <Modal
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        addItemToMenu={addItemToMenu}
+      />
       <div>
         <div>
           <h1>Top List</h1>
