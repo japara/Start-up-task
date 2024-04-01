@@ -1,4 +1,4 @@
-import "../css/styles.css";
+import "../css/styles.scss";
 import bowl from "../../public/images/bowl.png";
 import MenuCont from "./MenuCont";
 import fries from "../../public/images/fries.png";

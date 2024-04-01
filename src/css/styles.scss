@@ -3,13 +3,13 @@ $color_2: orange;
 $color_3: orangered;
 $color_4: white;
 $color_5: rgb(247, 197, 14);
-$color_6: brown;
+// $color_6: brown;
 $background-color_1: rgb(125, 121, 121);
 $background-color_2: rgb(168, 68, 41);
 $background-color_3: transparent;
 $background-color_4: rgba(240, 240, 240, 0.6);
 $background-color_5: #ffffff;
-$background-color_6: brown;
+// $background-color_6: brown;
 $background-color_7: aliceblue;
 $border-color_1: rgb(168, 68, 41);
 
@@ -203,7 +203,7 @@ div {
   }
   button {
     width: fit-content;
-    background-color: $background-color_6;
+    background-color: $background-color_2;
   }
 }
 label {
@@ -212,7 +212,7 @@ label {
 input {
   background-color: $background-color_7;
   margin: 1rem;
-  color: $color_6;
+  color: $color_1;
 }
 body.active-modal {
   overflow-y: hidden;

@@ -1,4 +1,4 @@
-import "../css/styles.css";
+import "../css/styles.scss";
 import svg from "../../public/images/profile-circle.svg";
 
 function Header() {

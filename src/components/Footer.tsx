@@ -1,4 +1,4 @@
-import "../css/styles.css";
+import "../css/styles.scss";
 import car from "../../public/images/car.svg";
 import mobile from "../../public/images/mobile.svg";
 import group from "../../public/images/group.svg";

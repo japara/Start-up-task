@@ -1,4 +1,4 @@
-import "../css/styles.css";
+import "../css/styles.scss";
 import star from "../../public/images/star.svg";
 import bin from "../../public/images/bin.svg";
 import { useState, useEffect } from "react";
