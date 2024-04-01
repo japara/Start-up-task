@@ -141,7 +141,8 @@ div button {
 #price-box img {
   position: relative;
   top: 2rem;
-  height: 3rem;
+  height: 2rem;
+  cursor: pointer;
 }
 
 #circle-btn {
