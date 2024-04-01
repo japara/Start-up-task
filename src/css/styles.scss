@@ -1,0 +1,219 @@
+$color_1: black;
+$color_2: orange;
+$color_3: orangered;
+$color_4: white;
+$color_5: rgb(247, 197, 14);
+$color_6: brown;
+$background-color_1: rgb(125, 121, 121);
+$background-color_2: rgb(168, 68, 41);
+$background-color_3: transparent;
+$background-color_4: rgba(240, 240, 240, 0.6);
+$background-color_5: #ffffff;
+$background-color_6: brown;
+$background-color_7: aliceblue;
+$border-color_1: rgb(168, 68, 41);
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+#container {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+#down-arrow {
+  font-size: 36px;
+  color: $color_1;
+  font-weight: bold;
+}
+ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    height: fit-content;
+    display: inline-table;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px;
+    cursor: pointer;
+    img {
+      height: 36px;
+    }
+  }
+}
+#logo {
+  color: $color_2;
+  font-weight: bold;
+  font-size: 32px;
+  span {
+    color: $color_3;
+  }
+}
+#bowl {
+  width: 40rem;
+}
+div {
+  button {
+    border-radius: 50px;
+    margin: 2rem;
+    color: $color_4;
+    font-weight: 700;
+  }
+}
+#white-btn {
+  background-color: $background-color_1;
+}
+#brown-btn {
+  background-color: $background-color_2;
+}
+#add-btn {
+  color: $color_1;
+  background-color: $background-color_3;
+  border-radius: 50px;
+  border-color: $border-color_1;
+  border-width: 0.1rem;
+}
+#menu-cont {
+  background-color: $background-color_4;
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 25px;
+  height: fit-content;
+  width: 400px;
+  margin-top: 4rem;
+  text-align: left;
+  padding-left: 2rem;
+  p {
+    width: 80%;
+  }
+}
+#menu-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#menu-img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 80%;
+  position: relative;
+  bottom: 2rem;
+  left: 2rem;
+}
+#rating {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  img {
+    width: 24px;
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
+  p {
+    color: $color_5;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 0.2rem;
+  }
+}
+#price-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: fit-content;
+  text-align: middle;
+  h4 {
+    font-size: 24px;
+  }
+  div {
+    text-align: middle;
+  }
+  img {
+    position: relative;
+    top: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+}
+#circle-btn {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: $background-color_2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+#sidebyside {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.5rem;
+}
+#top-align {
+  text-align: left;
+  vertical-align: middle;
+  position: relative;
+  right: 7rem;
+  p {
+    width: 20rem;
+  }
+}
+#footer {
+  display: flex;
+  justify-content: space-evenly;
+  div {
+    display: flex;
+  }
+  img {
+    margin-right: 1rem;
+    width: 2rem;
+    cursor: pointer;
+  }
+  p {
+    cursor: pointer;
+  }
+}
+.modalContainer {
+  max-width: 600px;
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $background-color_5;
+  border-radius: 8px;
+  z-index: 2;
+  text-align: left;
+  padding-left: 20%;
+  div {
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+  }
+  button {
+    width: fit-content;
+    background-color: $background-color_6;
+  }
+}
+label {
+  padding-top: 1rem;
+}
+input {
+  background-color: $background-color_7;
+  margin: 1rem;
+  color: $color_6;
+}
+body.active-modal {
+  overflow-y: hidden;
+}
